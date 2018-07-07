@@ -16,19 +16,31 @@ function addToCart(item) {
 }
 
 function viewCart() {
+  if (cart.length === 0) {
+    return "Your shopping cart is empty."
+  }
+  
   var returnLine = "In your cart, you have"
-  if (cart.length === 1) {
-    returnLine = returnLine + `${Object.keys(cart[0])} +
-  }
+  var iterator = 0
   for (itemName in cart) {
-    
+    if (iterator === 0) {
+      returnLine = returnLine + ` ${itemName} at ${cart[iterator][itemName]}`
+      iterator++
+    } else {
+      returnLine = returnLine + `, ${itemName} at ${cart[iterator][itemName]}`
+    }
   }
+  return (returnLine + ".")
 }
 
-viewCart()
-
 function total() {
-  // write your code here
+  var totalCounter = 0
+  var iterator = 0
+  for (var itemName in cart) {
+    totalCounter = totalCounter + parseInt(cart[iterator][itemName], 10)
+    iterator++
+  }
+  return totalCounter
 }
 
 function removeFromCart(item) {
