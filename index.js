@@ -21,13 +21,11 @@ function viewCart() {
   }
   
   var returnLine = "In your cart, you have"
-  var iterator = 0
-  for (itemName in cart) {
-    if (iterator === 0) {
-      returnLine = returnLine + ` ${itemName} at ${cart[iterator][itemName]}`
-      iterator++
+  for (var i = 0; i < cart.length; i++) {
+    if (i === 0) {
+      returnLine = returnLine + ` ${cart[i].itemName} at ${cart[i].itemPrice}`
     } else {
-      returnLine = returnLine + `, ${itemName} at ${cart[iterator][itemName]}`
+      returnLine = returnLine + `, ${cart[i].itemName} at ${cart[i].itemPrice}`
     }
   }
   return (returnLine + ".")
