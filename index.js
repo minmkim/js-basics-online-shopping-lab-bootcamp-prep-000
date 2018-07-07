@@ -17,7 +17,7 @@ function addToCart(item) {
 
 function viewCart() {
   var returnLine = "In your cart, you have"
-  for (var i = 0; i < cart.length; i++) {
+  for (var i = 0; i < Object.keys(cart).length; i++) {
     if (i === 0) {
       console.log(`${cart[i]}`)
       returnLine = returnLine + `${cart[i]} at `
@@ -25,7 +25,7 @@ function viewCart() {
     
   }
 }
-console.log(Object.keys(cart).length)
+
 viewCart()
 
 function total() {
