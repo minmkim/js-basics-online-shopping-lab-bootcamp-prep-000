@@ -37,7 +37,6 @@ function total() {
   var totalCounter = 0
   for (var i = 0; i < cart.length; i++) {
     totalCounter = totalCounter + parseInt(cart[i].itemPrice, 10)
-    iterator++
   }
   return totalCounter
 }
