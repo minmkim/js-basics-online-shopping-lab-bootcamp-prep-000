@@ -17,7 +17,10 @@ function addToCart(item) {
 
 function viewCart() {
   var returnLine = "In your cart, you have"
-  for itemName in cart {
+  if (cart.length === 1) {
+    returnLine = returnLine + `Object.
+  }
+  for (itemName in cart) {
     
   }
 }
