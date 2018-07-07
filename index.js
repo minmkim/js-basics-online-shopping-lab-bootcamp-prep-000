@@ -10,13 +10,22 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  var itemDescription = { item, Math.random() };
-  cart.push(itemDescription);
+  var itemDescription = { item: Math.random() }
+  cart.push(itemDescription)
+  return `${item} has been added to your cart.`
 }
 
 function viewCart() {
-  // write your code here
+  var returnLine = "In your cart, you have"
+  for (var i = 0; i < cart.length; i++) {
+    if (i === 0) {
+      console.log(`${cart[i]}`)
+      returnLine = returnLine + `${cart[i]} at `
+    }
+    
+  }
 }
+viewCart()
 
 function total() {
   // write your code here
