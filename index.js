@@ -10,8 +10,8 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  var itemDescription = { item, Math.random() }
-  cart.push(itemDescription)
+  var itemDescription = { item, Math.random() };
+  cart.push(itemDescription);
 }
 
 function viewCart() {
