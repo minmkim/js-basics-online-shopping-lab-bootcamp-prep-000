@@ -25,6 +25,7 @@ function viewCart() {
     if (i === 0) {
       returnLine = returnLine + ` ${cart[i].itemName} at $${cart[i].itemPrice}`
     } else if (i === cart.length - 1) {
+      returnLine = returnLine + `, and ${cart[i].itemName} at $${cart[i].itemPrice}`
     } else {
       returnLine = returnLine + `, ${cart[i].itemName} at $${cart[i].itemPrice}`
     }
