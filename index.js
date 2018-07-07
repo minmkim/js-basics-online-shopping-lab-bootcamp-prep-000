@@ -1,4 +1,4 @@
-var cart = { bannanas: 10, monkeys: 5 }
+var cart = []
 
 function getCart() {
  return cart;
@@ -17,10 +17,9 @@ function addToCart(item) {
 
 function viewCart() {
   var returnLine = "In your cart, you have"
-  for (var i = 0; i < Object.keys(cart).length; i++) {
+  for (var i = 0; i < cart.length; i++) {
     if (i === 0) {
-      console.log(`${Object.keys(cart)[i]}`)
-      returnLine = returnLine + `${cart[i]} at `
+      returnLine = returnLine + `${Object.cart[i].key} at ${cart[i]`
     }
     
   }
