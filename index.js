@@ -25,7 +25,7 @@ function viewCart() {
     
   }
 }
-
+console.log("hi")
 viewCart()
 
 function total() {
