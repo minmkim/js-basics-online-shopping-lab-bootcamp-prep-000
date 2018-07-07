@@ -17,11 +17,7 @@ function addToCart(item) {
 
 function viewCart() {
   var returnLine = "In your cart, you have"
-  for (var i = 0; i < cart.length; i++) {
-    if (i === 0) {
-      for var itemName 
-      returnLine = returnLine + `${Object.keys(cart[i])} at ${cart[i]`
-    }
+  for itemName in cart {
     
   }
 }
