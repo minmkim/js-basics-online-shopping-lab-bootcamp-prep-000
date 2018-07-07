@@ -42,7 +42,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var itemName = ""
+  var itemName = String()
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
       itemname = item
