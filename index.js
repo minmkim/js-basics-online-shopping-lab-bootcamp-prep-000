@@ -36,7 +36,7 @@ function viewCart() {
 function total() {
   var totalCounter = 0
   for (var i = 0; i < cart.length; i++) {
-    totalCounter = totalCounter + parseInt(cart[i].itemPrice, 10)
+    totalCounter = totalCounter + parseFloat(cart[i].itemPrice, 10)
   }
   return totalCounter
 }
@@ -44,7 +44,9 @@ function total() {
 function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
+      console.log(cart)
       cart.splice(i, 1)
+      console.log(cart)
     } else {
       return "That item is not in your cart."
     }
