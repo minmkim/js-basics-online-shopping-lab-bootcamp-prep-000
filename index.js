@@ -33,9 +33,8 @@ function viewCart() {
 
 function total() {
   var totalCounter = 0
-  var iterator = 0
-  for (var itemName in cart) {
-    totalCounter = totalCounter + parseInt(cart[iterator][itemName], 10)
+  for (var i = 0; i < cart.length; i++) {
+    totalCounter = totalCounter + parseInt(cart[i].itemPrice, 10)
     iterator++
   }
   return totalCounter
