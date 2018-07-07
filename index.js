@@ -19,7 +19,7 @@ function viewCart() {
   var returnLine = "In your cart, you have"
   for (var i = 0; i < Object.keys(cart).length; i++) {
     if (i === 0) {
-      console.log(`${Object.keys[i]}`)
+      console.log(`${Object.keys(cart)[i]}`)
       returnLine = returnLine + `${cart[i]} at `
     }
     
